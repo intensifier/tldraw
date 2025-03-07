@@ -1,52 +1,69 @@
-<div style="text-align: center; transform: scale(.5);">
-  <img src="https://github.com/tldraw/tldraw/raw/main/assets/card-repo.png"/>
+<div alt style="text-align: center; transform: scale(.5);">
+	<picture>
+		<source media="(prefers-color-scheme: dark)" srcset="https://github.com/tldraw/tldraw/raw/main/assets/github-hero-dark.png" />
+		<img alt="tldraw" src="https://github.com/tldraw/tldraw/raw/main/assets/github-hero-light.png" />
+	</picture>
 </div>
 
-![A screenshot of the tldraw web app](https://github.com/tldraw/tldraw/raw/main/assets/screenshot.png)
+# tldraw SDK
 
-Welcome to the [tldraw](https://tldraw.com) monorepo.
+tldraw is an infinite canvas SDK for React developers. You can use the tldraw SDK to add a drop-in whiteboard to your project, customize its appearance, extend its functionality, or use its components and APIs to compose other canvas experiences.
 
-🙌 Questions? Join the [Discord channel](https://discord.gg/SBBEVCA4PG) or start a [discussion](https://github.com/tldraw/tldraw/discussions/new).
+Learn more at our docs site: [tldraw.dev](https://tldraw.dev).
 
-💕 Love this project? Consider [becoming a sponsor](https://github.com/sponsors/steveruizok?frequency=recurring&sponsor=steveruizok).
+## Installation
 
-## Contents
+Install the `tldraw` package.
 
-This repository is a monorepo containing two packages:
+```bash
+npm i tldraw
+```
 
-- [**packages/tldraw**](https://github.com/tldraw/tldraw/tree/main/packages/tldraw) contains the source for the [@tldraw/tldraw](https://www.npmjs.com/package/@tldraw/tldraw) package. This is an editor as a React component named `<Tldraw>`. You can use this package to embed the tldraw editor in any React application.
-- [**packages/core**](https://github.com/tldraw/tldraw/tree/main/packages/core) contains the source for the [@tldraw/core](https://www.npmjs.com/package/@tldraw/core) package. This is a renderer for React components in a canvas-style UI. It is used by `@tldraw/tldraw` as well as several other projects.
+## Usage
 
-...and three apps:
+```tsx
+import { Tldraw } from 'tldraw'
+import 'tldraw/tldraw.css'
 
-- [**apps/www**](https://github.com/tldraw/tldraw/tree/main/apps/www) contains the source for the [tldraw.com](https://tldraw.com) website.
-- [**apps/vscode**](https://github.com/tldraw/tldraw/tree/main/apps/vscode) contains the source for the [tldraw VS Code extension](https://marketplace.visualstudio.com/items?itemName=tldraw-org.tldraw-vscode).
-- [**apps/electron**](https://github.com/tldraw/tldraw/tree/main/apps/electron) contains the source for an experimental Electron app.
+export default function () {
+	return <Tldraw />
+}
+```
 
-...and three examples:
+Visit [tldraw.dev](https://tldraw.dev) to learn more.
 
-- [**examples/core-example**](https://github.com/tldraw/tldraw/tree/main/examples/core-example) is a simple example for `@tldraw/core`.
-- [**examples/core-example-advanced**](https://github.com/tldraw/tldraw/tree/main/examples/core-example-advanced) is a second example for `@tldraw/core`.
-- [**examples/tldraw-example**](https://github.com/tldraw/tldraw/tree/main/examples/tldraw-example) is an example for `@tldraw/tldraw`.
+## Package development
 
-## Discussion
+To start the local development server:
 
-Want to connect? Visit the [Discord channel](https://discord.gg/SBBEVCA4PG).
+```bash
+npm run dev
+```
 
-## Contribution
-
-Interested in contributing? See the [contributing guide](/CONTRIBUTING.md).
-
-## Support
-
-Need help? Please [open an issue](https://github.com/tldraw/tldraw/issues/new) for support.
+This will run our [examples app](https://github.com/tldraw/tldraw/tree/main/apps/examples) locally at http://localhost:5420. Changes to packages will be reflected live on the examples app.
 
 ## License
 
-This project is licensed under MIT.
+This project is part of the tldraw SDK. It is provided under the [tldraw SDK license](https://github.com/tldraw/tldraw/blob/main/LICENSE.md).
 
-If you're using the library in a commercial product, please consider [becoming a sponsor](https://github.com/sponsors/steveruizok?frequency=recurring&sponsor=steveruizok).
+You can use the tldraw SDK in commercial or non-commercial projects so long as you preserve the "Made with tldraw" watermark on the canvas. To remove the watermark, you can purchase a [business license](https://tldraw.dev/#pricing). Visit [tldraw.dev](https://tldraw.dev) to learn more.
 
-## Author
+## Trademarks
 
-- [@steveruizok](https://twitter.com/steveruizok)
+Copyright (c) 2024-present tldraw Inc. The tldraw name and logo are trademarks of tldraw. Please see our [trademark guidelines](https://github.com/tldraw/tldraw/blob/main/TRADEMARKS.md) for info on acceptable usage.
+
+## Distributions
+
+You can find tldraw on npm [here](https://www.npmjs.com/package/@tldraw/tldraw?activeTab=versions).
+
+## Contribution
+
+Please see our [contributing guide](https://github.com/tldraw/tldraw/blob/main/CONTRIBUTING.md). Found a bug? Please [submit an issue](https://github.com/tldraw/tldraw/issues/new).
+
+## Community
+
+Have questions, comments or feedback? [Join our discord](https://discord.tldraw.com/?utm_source=github&utm_medium=social&utm_campaign=sociallink). For the latest news and release notes, visit [tldraw.dev](https://tldraw.dev).
+
+## Contact
+
+Find us on Twitter/X at [@tldraw](https://twitter.com/tldraw).

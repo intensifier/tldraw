@@ -1,71 +1,105 @@
-<div style="text-align: center; transform: scale(.5);">
-  <img src="https://github.com/tldraw/tldraw/raw/main/assets/card-repo.png"/>
-</div>
+# tldraw
 
-![A screenshot of the tldraw web app](./assets/screenshot.png)
+Welcome to the public monorepo for [tldraw](https://github.com/tldraw/tldraw). tldraw is a library for creating infinite canvas experiences in React. It's the software behind the digital whiteboard [tldraw.com](https://tldraw.com).
 
-Welcome to the [tldraw](https://tldraw.com) monorepo.
+- Read the docs and learn more at [tldraw.dev](https://tldraw.dev).
+- Learn about [our license](https://github.com/tldraw/tldraw#License).
 
-🙌 Questions? Join the [Discord channel](https://discord.gg/SBBEVCA4PG) or start a [discussion](https://github.com/tldraw/tldraw/discussions/new).
+> [Click here](https://tldraw.dev/#pricing) to learn about our license and pricing.
 
-💕 Love this project? Consider [becoming a sponsor](https://github.com/sponsors/steveruizok?frequency=recurring&sponsor=steveruizok).
+## Installation
 
-Thanks to our corporate sponsors:
+```bash
+npm i tldraw
+```
 
-<div style="display: flex; flex-wrap: wrap; gap: 32px;">
-<a href="https://sentry.io"><img src="./assets/sentry.svg"></img></a>
+## Usage
 
-<a href="https://vercel.com/?utm_source=team-slug&utm_campaign=oss"><img src="./assets/vercel.svg"></img></a>
+```tsx
+import { Tldraw } from 'tldraw'
+import 'tldraw/tldraw.css'
 
-<a href="https://oppizi.com"><img src="./assets/oppizi.png" width="212"></img></a>
+export default function App() {
+	return (
+		<div style={{ position: 'fixed', inset: 0 }}>
+			<Tldraw />
+		</div>
+	)
+}
+```
 
-<a href="https://logseq.com"><img src="./assets/logseq.svg" width="80"></img></a>
+Learn more at [tldraw.dev](https://tldraw.dev).
 
-<a href="https://blindsidenetworks.com/"><img src="./assets/blindside.png" width="212"></img></a>
+## Local development
 
-<a href="https://www.100ms.live/"><img src="./assets/100ms.png" width="212"></img></a>
+The local development server will run our examples app. The basic example will show any changes you've made to the codebase.
 
-</div>
+To run the local development server, first clone this repo.
 
-...and to our [individual sponsors](https://github.com/sponsors/steveruizok#sponsors)!
+Enable [corepack](https://nodejs.org/api/corepack.html) to make sure you have the right version of `yarn`:
 
-## Contents
+```bash
+corepack enable
+```
 
-This repository is a monorepo containing two packages:
+Install dependencies:
 
-- [**packages/tldraw**](https://github.com/tldraw/tldraw/tree/main/packages/tldraw) contains the source for the [@tldraw/tldraw](https://www.npmjs.com/package/@tldraw/tldraw) package. This is an editor as a React component named `<Tldraw>`. You can use this package to embed the tldraw editor in any React application.
-- [**packages/core**](https://github.com/tldraw/tldraw/tree/main/packages/core) contains the source for the [@tldraw/core](https://www.npmjs.com/package/@tldraw/core) package. This is a renderer for React components in a canvas-style UI. It is used by `@tldraw/tldraw` as well as several other projects.
+```bash
+yarn
+```
 
-...and three apps:
+Start the local development server:
 
-- [**apps/www**](https://github.com/tldraw/tldraw/tree/main/apps/www) contains the source for the [tldraw.com](https://tldraw.com) website.
-- [**apps/vscode**](https://github.com/tldraw/tldraw/tree/main/apps/vscode) contains the source for the [tldraw VS Code extension](https://marketplace.visualstudio.com/items?itemName=tldraw-org.tldraw-vscode).
-- [**apps/electron**](https://github.com/tldraw/tldraw/tree/main/apps/electron) contains the source for an experimental Electron app.
+```bash
+yarn dev
+```
 
-...and three examples:
-
-- [**examples/core-example**](https://github.com/tldraw/tldraw/tree/main/examples/core-example) is a simple example for `@tldraw/core`.
-- [**examples/core-example-advanced**](https://github.com/tldraw/tldraw/tree/main/examples/core-example-advanced) is a second example for `@tldraw/core`.
-- [**examples/tldraw-example**](https://github.com/tldraw/tldraw/tree/main/examples/tldraw-example) is an example for `@tldraw/tldraw`.
-
-## Discussion
-
-Want to connect? Visit the [Discord channel](https://discord.gg/SBBEVCA4PG).
-
-## Contribution
-
-Interested in contributing? See the [contributing guide](/CONTRIBUTING.md).
-
-## Support
-
-Need help? Please [open an issue](https://github.com/tldraw/tldraw/issues/new) for support.
+Open the example project at `localhost:5420`.
 
 ## License
 
-This project is licensed under MIT.
+The tldraw SDK is provided under the [tldraw license](https://github.com/tldraw/tldraw/blob/main/LICENSE.md).
 
-If you're using the library in a commercial product, please consider [becoming a sponsor](https://github.com/sponsors/steveruizok?frequency=recurring&sponsor=steveruizok).
+You can use the tldraw SDK in commercial or non-commercial projects so long as you preserve the "Made with tldraw" watermark on the canvas. To remove the watermark, you can purchase a [business license](https://tldraw.dev/#pricing). Visit [tldraw.dev](https://tldraw.dev) to learn more.
 
-## Author
+## Trademarks
 
-- [@steveruizok](https://twitter.com/steveruizok)
+Copyright (c) 2024-present tldraw Inc. The tldraw name and logo are trademarks of tldraw. Please see our [trademark guidelines](https://github.com/tldraw/tldraw/blob/main/TRADEMARKS.md) for info on acceptable usage.
+
+## Distributions
+
+You can find tldraw on npm [here](https://www.npmjs.com/package/@tldraw/tldraw?activeTab=versions).
+
+## Contribution
+
+Please see our [contributing guide](https://github.com/tldraw/tldraw/blob/main/CONTRIBUTING.md). Found a bug? Please [submit an issue](https://github.com/tldraw/tldraw/issues/new).
+
+## Community
+
+Have questions, comments or feedback? [Join our discord](https://discord.tldraw.com/?utm_source=github&utm_medium=social&utm_campaign=sociallink). For the latest news and release notes, visit [tldraw.dev](https://tldraw.dev).
+
+## Contributors
+
+<a href="https://github.com/tldraw/tldraw/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=tldraw/tldraw&max=400&columns=20" width="100%"/>
+</a>
+
+## Star History
+
+<a href="https://star-history.com/#tldraw/tldraw">
+	<picture>
+	  <source
+	    media="(prefers-color-scheme: dark)"
+	    srcset="https://api.star-history.com/svg?repos=tldraw/tldraw&type=Date&theme=dark"
+	  />
+	  <source
+	    media="(prefers-color-scheme: light)"
+	    srcset="https://api.star-history.com/svg?repos=tldraw/tldraw&type=Date"
+	  />
+	  <img src="https://api.star-history.com/svg?repos=tldraw/tldraw&type=Date" alt="Star History Chart" width="100%" />
+	</picture>
+</a>
+
+## Contact
+
+Find us on Twitter/X at [@tldraw](https://twitter.com/tldraw). You can contact us by email at [hello@tldraw.com](mailto:hello@tldraw.com).

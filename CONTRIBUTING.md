@@ -1,80 +1,24 @@
-# Welcome to the tldraw contributing guide <!-- omit in toc -->
+# Contributing
 
-Thank you for investing your time in contributing to our project! Any contribution you make will be reflected in the @tldraw/tldraw package and at [tldraw.com](https://tldraw.com).
+Thank you for your interest in contributing to [tldraw](https://github.com/tldraw/tldraw)! We welcome any contributions to the code base and the documentation.
 
-Read our [Code of Conduct](./CODE_OF_CONDUCT.md) to keep our community approachable and respectable.
+## Create an Issue!
 
-In this guide you will get an overview of the contribution workflow from opening an issue, creating a PR, reviewing, and merging the PR.
+Before submitting a pull request, it is **strongly recommended** to [create an issue](https://github.com/tldraw/tldraw/issues/new/choose) first to discuss your proposed changes. This will help us to make sure that your changes are aligned with the project goals and that you are not duplicating work that is already in progress.
 
-Use the table of contents icon on the top left corner of this document to get to a specific section of this guide quickly.
+If you are not sure whether your changes are needed, feel free to create an issue anyway and we can discuss it there. Once we have agreed on the changes, you can start working on them.
 
-## New contributor guide
+## Making Changes
 
-To get an overview of the project, read the [README](README.md). Here are some resources to help you get started with open source contributions:
+To create a pull request:
 
-- [Finding ways to contribute to open source on GitHub](https://docs.github.com/en/get-started/exploring-projects-on-github/finding-ways-to-contribute-to-open-source-on-github)
-- [Set up Git](https://docs.github.com/en/get-started/quickstart/set-up-git)
-- [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow)
-- [Collaborating with pull requests](https://docs.github.com/en/github/collaborating-with-pull-requests)
+1. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) and [clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) the [repository](https://github.com/tldraw/tldraw)
+2. [Create a separate branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-branches) for your changes
+3. Make your changes, and ensure that it is formatted by [Prettier](https://prettier.io) and type-checks without errors in [TypeScript](https://www.typescriptlang.org/)
+4. Write tests that validate your change and/or fix.
+5. Run `yarn build` and then run tests with `yarn test-ci`.
+6. Push your branch and open a PR. 🚀
 
-## Getting started
+Before your code is merged, you will need to sign our [contributor license agreement](https://github.com/tldraw/tldraw/blob/main/CLA.md), which is handled automatically via GitHub comments. Your PR will be reviewed and merged in within a day or two if everything looks good.
 
-Join the [Discord channel](https://discord.gg/SBBEVCA4PG). If you have questions or feedback, this is the best place to reach the team and other contributors directly.
-
-### Issues
-
-#### Create a new issue
-
-If you spot a problem, [search if an issue already exists](https://github.com/tldraw/tldraw/issues). If a related issue doesn't exist, you can open a new issue using a relevant [issue form](https://github.com/tldraw/tldraw/issues/new/choose).
-
-#### Solve an issue
-
-Scan through our [existing issues](https://github.com/tldraw/tldraw/issues) to find one that interests you. You can narrow down the search using `labels` as filters. See [Labels](/contributing/how-to-use-labels.md) for more information. If you find an issue to work on, you are welcome to open a PR with a fix.
-
-### Make Changes
-
-#### Make changes locally
-
-1. [Install Git LFS](https://docs.github.com/en/github/managing-large-files/versioning-large-files/installing-git-large-file-storage).
-
-2. Fork the repository.
-
-- Using GitHub Desktop:
-
-  - [Getting started with GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/getting-started-with-github-desktop) will guide you through setting up Desktop.
-  - Once Desktop is set up, you can use it to [fork the repo](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/cloning-and-forking-repositories-from-github-desktop)!
-
-- Using the command line:
-
-  - [Fork the repo](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo#fork-an-example-repository) so that you can make your changes without affecting the original project until you're ready to merge them.
-
-- GitHub Codespaces:
-  - [Fork, edit, and preview](https://docs.github.com/en/free-pro-team@latest/github/developing-online-with-codespaces/creating-a-codespace) using [GitHub Codespaces](https://github.com/features/codespaces) without having to install and run the project locally.
-
-3. Install or update to **Node.js v16**.
-
-4. Create a working branch and start with your changes!
-
-5. Follow the [the development guide](guides/development.md).
-
-### Commit your update
-
-Commit the changes once you are happy with them.
-
-### Pull Request
-
-When you're finished with the changes, create a pull request, also known as a PR.
-
-- Fill the "Ready for review" template so that we can review your PR. This template helps reviewers understand your changes as well as the purpose of your pull request.
-- Don't forget to [link PR to issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) if you are solving one.
-- Enable the checkbox to [allow maintainer edits](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork) so the branch can be updated for a merge.
-  Once you submit your PR, a team member will review your proposal. We may ask questions or request for additional information.
-- We may ask for changes to be made before a PR can be merged, either using [suggested changes](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/incorporating-feedback-in-your-pull-request) or pull request comments. You can apply suggested changes directly through the UI. You can make any other changes in your fork, then commit them to your branch.
-- As you update your PR and apply changes, mark each conversation as [resolved](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#resolving-conversations).
-- If you run into any merge issues, checkout this [git tutorial](https://lab.github.com/githubtraining/managing-merge-conflicts) to help you resolve merge conflicts and other issues.
-
-### Your PR is merged!
-
-Congratulations :tada::tada: The GitHub team thanks you :sparkles:.
-
-Once your PR is merged, your contributions will become part of the next tldraw release, and will be visible in the [tldraw app](https://tldraw.com).
+Please also see our [Code of Conduct](https://github.com/tldraw/tldraw/blob/main/CODE_OF_CONDUCT.md) for our expectations around contributor culture.
